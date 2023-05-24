@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MusicApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="music_app">Music App</string>
+    <string name="category_name">Category Name</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="album_name">Album Name</string>
+    <string name="release_date">Release Date</string>
+    <string name="song_duration">2:34\'\'</string>
+    <string name="song_name">Song Name</string>
+    <string name="favourites">Beğenilenler</string>
+</resources>

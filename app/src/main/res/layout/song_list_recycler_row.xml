@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/cardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:strokeColor="@color/card_view_stroke_color"
+    app:strokeWidth="1dp"
+    app:cardCornerRadius="15dp"
+    android:background="@drawable/app_bg">
+
+    <TextView
+        android:id="@+id/addFavouriteButton"
+        android:layout_width="25dp"
+        android:layout_height="22dp"
+        android:layout_gravity="top|right"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="15dp"
+        android:elevation="1dp"
+        android:background="@drawable/favourite_icon_empty">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_bg"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/albumImageView"
+            android:layout_width="120dp"
+            android:layout_height="130dp"
+            style="@style/ImageStyle"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background">
+
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/songNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="37dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/song_name"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium">
+            </TextView>
+            <TextView
+                android:id="@+id/songDurationTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="37dp"
+                android:text="@string/song_duration"
+                android:textSize="12sp"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_medium">
+            </TextView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>

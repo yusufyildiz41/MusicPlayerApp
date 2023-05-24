@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/musicCategoryFragment">
+
+    <fragment
+        android:id="@+id/musicCategoryFragment"
+        android:name="com.yusufyildiz.musicapp.presentation.musiccategory.MusicCategoryFragment"
+        android:label="fragment_music_category"
+        tools:layout="@layout/fragment_music_category" >
+        <action
+            android:id="@+id/action_musicCategoryFragment_to_artistListFragment"
+            app:destination="@id/artistListFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteMusicListFragment"
+        android:name="com.yusufyildiz.musicapp.presentation.favourites.FavouriteMusicListFragment"
+        android:label="fragment_favourite_music_list"
+        tools:layout="@layout/fragment_favourite_music_list" />
+    <fragment
+        android:id="@+id/artistListFragment"
+        android:name="com.yusufyildiz.musicapp.presentation.artistlist.ArtistListFragment"
+        android:label="fragment_artist_list"
+        tools:layout="@layout/fragment_artist_list" >
+        <argument
+            android:name="category_name"
+            app:argType="string" />
+        <argument
+            android:name="category_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_artistListFragment_to_artistDetailFragment"
+            app:destination="@id/artistDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/artistDetailFragment"
+        android:name="com.yusufyildiz.musicapp.presentation.artistdetail.ArtistDetailFragment"
+        android:label="fragment_artist_detail"
+        tools:layout="@layout/fragment_artist_detail" >
+        <argument
+            android:name="artist_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_artistDetailFragment_to_albumDetailFragment"
+            app:destination="@id/albumDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/albumDetailFragment"
+        android:name="com.yusufyildiz.musicapp.presentation.albumdetail.AlbumDetailFragment"
+        android:label="fragment_album_detail"
+        tools:layout="@layout/fragment_album_detail" >
+        <argument
+            android:name="album_id"
+            app:argType="long" />
+        <argument
+            android:name="album_name"
+            app:argType="string" />
+    </fragment>
+</navigation>
