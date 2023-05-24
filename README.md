@@ -6,60 +6,27 @@ This application made using Deezer Api, you can listen to the songs in the categ
 
 <table>
   <tr>
-    <th>Intro Page</th>
-    <th>Sign-In Page</th>
-    <th>Sign-Up Page</th>
-    <th>Video Calling Page</th>
+    <th>Category List Page</th>
+    <th>Artist List Page</th>
+    <th>Artist Detail Page</th>
   </tr>
   <tr>
-    <td><img src="pages/intro.jpg" width="200" height="600"/></td>
-    <td><img src="pages/sign_in.jpg" width="200" height="600"/></td>
-    <td><img src="pages/sign_up.jpg" width="200" height="600"/></td>
-    <td><img src="pages/video_calling.jpg" width="200" height="600"/></td>
+    <td><img src="pages/category_list.png" width="200" height="600"/></td>
+    <td><img src="pages/artist_list.png" width="200" height="600"/></td>
+    <td><img src="pages/artist_detail.png" width="200" height="600"/></td>
   </tr>
 </table>
 
 <table>
   <tr>
-    <th>Home Page</th>
-    <th>Message List Page</th>
-    <th>Message Page</th>
-    <th>Expert Search List Page</th>
+    <th>Music List Page</th>
+    <th>Favourite Music List Page</th>
   </tr>
   <tr>
-    <td><img src="pages/home_page.png" width="200" height="600"/></td>
-    <td><img src="pages/message_list.png" width="200" height="600"/></td>
-    <td><img src="pages/message.png" width="200" height="600"/></td>
-    <td><img src="pages/expert_search_list.png" width="200" height="600"/></td>
+    <td><img src="pages/music_list.png" width="200" height="600"/></td>
+    <td><img src="pages/favourite_music_list.png" width="200" height="600"/></td>
   </tr>
 </table>
-
-<table>
-  <tr>
-    <th>Expert Detail Page</th>
-    <th>Expert Appointment Page</th>
-    <th>Expert Appointment Time Page</th>
-    <th>Expert Appointment Time and Date Page</th>
-  </tr>
-  <tr>
-    <td><img src="pages/expert_search_detail.png" width="200" height="600"/></td>
-    <td><img src="pages/expert_appointment.png" width="200" height="600"/></td>
-    <td><img src="pages/expert_appointment_time.png" width="200" height="600"/></td>
-    <td><img src="pages/expert_appointment_time_and_date.png" width="200" height="600"/></td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <th>Expert Profile Page</th>
-    <th>User Profil Page</th>
-  </tr>
-  <tr>
-    <td><img src="pages/expert_profile.png" width="200" height="600"/></td>
-    <td><img src="pages/user_profile.png" width="200" height="600"/></td>
-  </tr>
-</table>
-
 
 
 # Project Tech stack & Open-source libraries
