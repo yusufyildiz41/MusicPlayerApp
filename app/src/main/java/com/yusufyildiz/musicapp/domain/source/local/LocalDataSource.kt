@@ -6,5 +6,5 @@ interface LocalDataSource {
     suspend fun addSongToFavourites(song: Song)
     suspend fun deleteSongFromFavourites(song: Song)
     suspend fun getFavouriteSongList(): List<Song>?
-    suspend fun searchSongWithSongId(songId: Long): List<Song>?
+    suspend fun getSongIdList(): List<Long>?
 }

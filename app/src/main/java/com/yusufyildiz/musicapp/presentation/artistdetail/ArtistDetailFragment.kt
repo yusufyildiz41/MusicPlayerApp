@@ -17,6 +17,7 @@ import com.yusufyildiz.musicapp.common.Resource
 import com.yusufyildiz.musicapp.common.extension.gone
 import com.yusufyildiz.musicapp.common.extension.visible
 import com.yusufyildiz.musicapp.data.model.albumlistmodel.AlbumListModel
+import com.yusufyildiz.musicapp.data.model.song.Song
 import com.yusufyildiz.musicapp.databinding.FragmentArtistDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -108,7 +109,6 @@ class ArtistDetailFragment : Fragment() {
                         }
                     }
                 }
-
             }
         }
     }

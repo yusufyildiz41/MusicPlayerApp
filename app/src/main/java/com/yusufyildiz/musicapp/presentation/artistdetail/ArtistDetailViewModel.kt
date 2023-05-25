@@ -3,8 +3,10 @@ package com.yusufyildiz.musicapp.presentation.artistdetail
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.yusufyildiz.musicapp.common.Resource
+import com.yusufyildiz.musicapp.data.model.albumdetailmodel.AlbumDetailsDataModel
 import com.yusufyildiz.musicapp.data.model.albumlistmodel.AlbumListDataModel
 import com.yusufyildiz.musicapp.data.model.artistdetailmodel.ArtistDetailModel
+import com.yusufyildiz.musicapp.domain.usecase.albumdetail.AlbumDetailUseCase
 import com.yusufyildiz.musicapp.domain.usecase.albumlist.AlbumListUseCase
 import com.yusufyildiz.musicapp.domain.usecase.artistdetail.ArtistDetailUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

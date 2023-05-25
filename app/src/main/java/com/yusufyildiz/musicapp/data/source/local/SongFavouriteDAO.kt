@@ -9,7 +9,6 @@ import com.yusufyildiz.musicapp.data.model.song.Song
 
 @Dao
 interface SongFavouriteDAO {
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addSongToFavourites(song: Song)
 
@@ -19,6 +18,6 @@ interface SongFavouriteDAO {
     @Query("SELECT * FROM song ORDER BY date DESC")
     suspend fun getFavouriteSongList(): List<Song>?
 
-    @Query("SELECT * FROM song WHERE song_id LIKE :songId")
-    suspend fun searchSong(songId: Long): List<Song>?
+    @Query("SELECT song_id FROM song")
+    suspend fun getSongIdList(): List<Long>?
 }

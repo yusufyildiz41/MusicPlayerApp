@@ -43,22 +43,18 @@ class AlbumDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        albumDetailViewModel.getAlbumDetailsByAlbumId(args.albumId)
         albumDetailRecyclerAdapter = AlbumDetailRecyclerAdapter(glide)
-
         binding.songListRecyclerView.adapter = albumDetailRecyclerAdapter
 
         albumDetailRecyclerAdapter.onFavouriteClick = { song ->
             albumDetailViewModel.favouriteSong(song)
-            albumDetailRecyclerAdapter.notifyItemChanged(
-                albumDetailRecyclerAdapter.songList.indexOf(song)
-            )
         }
 
         albumDetailRecyclerAdapter.onSongClick = { song ->
             albumDetailViewModel.playSongWithSongURL(song.songPreview.orEmpty())
         }
 
-        albumDetailViewModel.getAlbumDetailsByAlbumId(args.albumId)
         initCollectors()
     }
 
@@ -71,12 +67,7 @@ class AlbumDetailFragment : Fragment() {
                             when (it) {
                                 is Resource.Success -> {
                                     loadingProgressBar.gone()
-                                    val songList = it.data.songs?.trackListData.orEmpty()
-                                        .map { songDetailDto ->
-                                            songDetailDto.toSong()
-                                        }
-                                    albumDetailRecyclerAdapter.songList = songList
-                                    albumDetailRecyclerAdapter.notifyDataSetChanged()
+                                    albumDetailRecyclerAdapter.submitList(it.data)
                                     albumNameTextView.text = args.albumName
                                 }
 

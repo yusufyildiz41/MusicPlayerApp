@@ -21,12 +21,11 @@ data class Song(
     @ColumnInfo(name = "song_image")
     val songImage: String?=null,
 
-    @ColumnInfo(name = "is_favourite")
-    var isFavourite: Boolean = false,
-
     @ColumnInfo(name = "song_preview")
     val songPreview: String?=null,
 
     @ColumnInfo(name = "date")
-    val date: LocalDateTime = LocalDateTime.now()
+    val date: LocalDateTime = LocalDateTime.now(),
+
+    var isFavourite: Boolean = false
 )

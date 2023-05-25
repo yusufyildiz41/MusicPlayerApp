@@ -12,11 +12,10 @@ interface MusicRepository {
     suspend fun getArtistListByCategory(categoryId: Int): ArtistListDataModel
     suspend fun getArtistDetailByArtistId(artistId: Int): ArtistDetailModel
     suspend fun getAlbumListByArtistId(artistId: Int): AlbumListDataModel
-    suspend fun getSongListByAlbumId(albumId: Long): AlbumDetailsDataModel
+    suspend fun getSongListByAlbumId(albumId: Long): List<Song>
     suspend fun addSongToFavourites(song: Song)
     suspend fun deleteSongFromFavourites(song: Song)
     suspend fun getFavouriteSongList(): List<Song>?
-    suspend fun searchSongWithSongId(songId: Long): List<Song>?
     suspend fun playSongWithSongURL(songURL: String)
     suspend fun stopSong()
 }

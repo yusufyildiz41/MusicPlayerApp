@@ -23,7 +23,7 @@ class LocalDataSourceImpl @Inject constructor(
         songFavouriteDAO.getFavouriteSongList()
     }
 
-    override suspend fun searchSongWithSongId(songId: Long) = withContext(ioDispatcher){
-        songFavouriteDAO.searchSong(songId)
+    override suspend fun getSongIdList() = withContext(ioDispatcher) {
+        songFavouriteDAO.getSongIdList()
     }
 }
